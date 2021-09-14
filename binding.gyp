@@ -129,12 +129,16 @@
             '<!@(pkg-config libpng --libs)',
             '<!@(pkg-config pangocairo --libs)',
             '<!@(pkg-config freetype2 --libs)'
+            '<!@(pkg-config libjpeg --libs)'
+            '<!@(pkg-config giflib --libs)'
           ],
           'include_dirs': [
             '<!@(pkg-config cairo --cflags-only-I | sed s/-I//g)',
             '<!@(pkg-config libpng --cflags-only-I | sed s/-I//g)',
             '<!@(pkg-config pangocairo --cflags-only-I | sed s/-I//g)',
             '<!@(pkg-config freetype2 --cflags-only-I | sed s/-I//g)'
+            '<!@(pkg-config libjpeg --cflags-only-I | sed s/-I//g)'
+            '<!@(pkg-config giflib --cflags-only-I | sed s/-I//g)'
           ],
           'cflags': ['-Wno-cast-function-type'],
           'cflags!': ['-fno-exceptions'],
